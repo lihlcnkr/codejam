@@ -2,12 +2,15 @@ module Main where
 
 import Data.Set
 
-import Sleep
-import Pancakes
+import BathroomStalls
 import System.Environment
 
-readCaseAndToOutput::  (String -> String) -> (Int,String) -> String
-readCaseAndToOutput f (x, y) = "Case #" ++ (show x) ++ ": " ++ (f y)
+readCaseAndToOutput::  (String -> String) -> (Int,String) -> IO String
+readCaseAndToOutput f (x, y) = do
+  putStrLn ("Case #" ++ (show x) ++ ": " ++ y)
+  let ret = f y
+  putStrLn ("ret:" ++ ret)
+  return ("Case #" ++ (show x) ++ ": " ++ ret)
 
 
 
@@ -23,5 +26,7 @@ readFileToCases x = do
 main = do
   (arg1:argRest) <- getArgs
   caseDatas <- readFileToCases arg1
-  let outputs = fmap (readCaseAndToOutput getPanCakes) caseDatas
+  --mapM_ putStrLn $ fmap snd caseDatas
+  outputs <- mapM (readCaseAndToOutput getBathroomStalls) caseDatas
+  --mapM_ putStrLn $ fmap outputs
   writeFile (head argRest) $ unlines outputs
