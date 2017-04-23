@@ -1,6 +1,5 @@
 module Main where
 
-import Data.Set
 
 import BathroomStalls
 import System.Environment
