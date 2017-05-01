@@ -21,11 +21,16 @@ library
                      , CoinJam
                      , TidyNumbers
                      , BathroomStalls
+                     , FasionShow
+                     , AmpleSyrup
   build-depends:       base >= 4.7
                      , containers
                      , mtl
                      , vector
+                     , vector-algorithms
                      , random
+                     , primitive
+                     , ghc-prim
   default-language:    Haskell2010
   extensions: TemplateHaskell, MultiParamTypeClasses, ViewPatterns
 executable codejam-exe
