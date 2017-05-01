@@ -1,6 +1,6 @@
 {-# LANGUAGE QuasiQuotes
            , RecordWildCards #-}
-module TidyNumbersSpec where
+module QR.TidyNumbersSpec where
 
 import Test.Hspec
 import Data.Maybe
