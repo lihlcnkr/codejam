@@ -14,7 +14,9 @@ extra-source-files:  README.md
 cabal-version:       >=1.10
 
 library
-  hs-source-dirs:      src
+  hs-source-dirs:       src
+                      , src/QR
+                      , src/R1
   exposed-modules:     Prime
                      , Sleep
                      , Pancakes
@@ -23,6 +25,8 @@ library
                      , BathroomStalls
                      , FasionShow
                      , AmpleSyrup
+                     , CodeJam
+                     , R1.ParentPartner
   build-depends:       base >= 4.7
                      , containers
                      , mtl

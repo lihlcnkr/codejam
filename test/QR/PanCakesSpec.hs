@@ -1,6 +1,6 @@
 {-# LANGUAGE QuasiQuotes
            , RecordWildCards #-}
-module PanCakesSpec where
+module QR.PanCakesSpec where
 
 import Test.Hspec
 import Data.Maybe
