@@ -1,6 +1,6 @@
 {-# LANGUAGE QuasiQuotes
            , RecordWildCards #-}
-module SleepSpec where
+module QR.SleepSpec where
 
 import Test.Hspec
 import Data.Maybe

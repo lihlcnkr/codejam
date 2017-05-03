@@ -1,6 +1,6 @@
 {-# LANGUAGE QuasiQuotes
            , RecordWildCards #-}
-module BathroomStallsSpec where
+module QR.BathroomStallsSpec where
 
 import Test.Hspec
 import Data.Maybe

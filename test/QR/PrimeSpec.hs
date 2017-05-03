@@ -1,6 +1,6 @@
 {-# LANGUAGE QuasiQuotes
            , RecordWildCards #-}
-module PrimeSpec where
+module QR.PrimeSpec where
 
 import Test.Hspec
 import Data.Maybe
