@@ -5,7 +5,7 @@ module QR.PanCakesSpec where
 import Test.Hspec
 import Data.Maybe
 import Data.Set
-import Pancakes
+import QR.Pancakes
 
 
 spec :: Spec
