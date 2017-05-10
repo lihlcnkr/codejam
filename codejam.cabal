@@ -26,6 +26,7 @@ library
                      , FasionShow
                      , AmpleSyrup
                      , CodeJam
+                     , R1.ParentPartner
   build-depends:       base >= 4.7
                      , containers
                      , mtl

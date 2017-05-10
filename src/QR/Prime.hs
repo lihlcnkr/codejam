@@ -67,28 +67,3 @@ divisorInScope a r = (b, r)
   where
     b = S.foldl (\y x -> if isJust y then y else if mod a x == 0 then Just x else Nothing) Nothing (primeSet r)
 
--- getDivisors :: Int -> PrimeRepo -> (Maybe Int, PrimeRepo)
--- getDivisors 1 s = (Nothing, s)
--- getDivisors a s
---   | a > maxChecked s = 
---   | otherwise = case lookup
-
-
---getDivisor ::
-
--- getDevisorAndSet :: Int -> PrimeRepo -> (Maybe Int, PrimeRepo)
--- getDevisorAndSet a s
---   | a > maxChecked s = evalState $ do
-      
---   | member a (primeSet s) = (Nothing, s)
---   | otherwise = (b, ss)
---     where (b, ss) = getDivisor a (primeSet s)
-
-
-
--- getDivisorInScope :: Int -> PrimeRepo -> (Maybe Int, PrimeRepo)
--- getDivisorInscope a r = case b of Nothing -> (Nothing, PrimeRepo (S.insert a r))
---                            Just c -> (b, s)
---   where
---     ss 
---     b = S.foldl (\y x -> if isJust y then y else if mod a x == 0 then Just x else Nothing) Nothing s
