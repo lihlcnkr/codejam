@@ -1,4 +1,4 @@
-module TwiceLiner where
+module CodeWars.TwiceLiner where
 
 
 
@@ -10,44 +10,40 @@ module TwiceLiner where
 import Data.List
 import Data.Map.Lazy(Map)
 import qualified Data.Map.Lazy as Map
+import qualified Data.Set as Set
 
-import Control.Monad.State.Lazy(State)
-import qualified Control.Monad.State.Lazy as State
+
+--import Control.Monad.State.Lazy(State)
+--import qualified Control.Monad.State.Lazy as State
 
 lexiPos :: String -> Integer
-lexiPos xs =
+lexiPos xs = lexiPos' xs xsm
+  where xsm = toCharMap xs
  
 
 
-lexiPos' :: String -> State (Map Char Int) Integer
-lexiPos' (x:xs) = do
-  sm <- get
-
- 
- 
-  () +
- 
+lexiPos' :: String -> (Map Char Int) -> Integer
+lexiPos' [] _ = 0
+lexiPos' (x:[]) _ = 1
+lexiPos' (x:xs) ms = (lexiPos' xs (minusChar ms x)) + (sum (fmap getPossibleCount (getSmallCharList x ms)))
 
 
-totalLexiCount :: [Int] -> Integer
-totalLexiCount [] = 0
-totalLexiCount (0:xs) = totalLexiCount xs
-totalLexiCount (x:xs) = (totalLexiCount xs) + (totalLexiCount [x-1]:xs)
- 
+minusChar :: (Map Char Int) -> Char -> (Map Char Int)
+minusChar xm y = Map.update  (\a -> if a > 1 then Just (a-1) else Nothing) y xm
 
-toCharMap :: String -> Map Char Int
+
+toCharMap :: String -> (Map Char Int)
 toCharMap ys = Map.fromList zs
   where
     zs = fmap (\xss@(x:xs) -> (x, length xss)) $ group $ sort ys
 
 
 
-getSmallCharMap :: Char -> State (Map Char Int) (Map Char Int)
-getSmallCharMap x = do
-  sm <- State.get
-  return $ filter (\y -> compare y x == LT) sm
- 
-
+getSmallCharList :: Char -> (Map Char Int) -> [[Int]]
+getSmallCharList x ym = fmap (\k -> (Map.elems . (minusChar ym)) k) smallKeys
+  where keys = Map.keysSet ym
+        smallKeys = Set.toList $ Set.filter (\k -> compare k x == LT) keys
+  
 
 getPossibleCount::[Int] -> Integer
 getPossibleCount [] = 0

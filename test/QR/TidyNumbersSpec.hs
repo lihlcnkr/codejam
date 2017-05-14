@@ -5,7 +5,7 @@ module QR.TidyNumbersSpec where
 import Test.Hspec
 import Data.Maybe
 import Data.Set
-import TidyNumbers
+import QR.TidyNumbers
 
 
 spec :: Spec

@@ -5,7 +5,7 @@ module QR.SleepSpec where
 import Test.Hspec
 import Data.Maybe
 import Data.Set
-import Sleep
+import QR.Sleep
 
 
 spec :: Spec

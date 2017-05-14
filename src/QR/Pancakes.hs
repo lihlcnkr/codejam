@@ -1,4 +1,4 @@
-module Pancakes where
+module QR.Pancakes where
 
 import Data.List
 

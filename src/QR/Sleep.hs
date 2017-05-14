@@ -1,4 +1,4 @@
-module Sleep where
+module QR.Sleep where
 
 import Data.Set
 import Control.Monad.State.Lazy

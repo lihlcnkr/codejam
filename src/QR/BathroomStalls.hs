@@ -1,4 +1,4 @@
-module BathroomStalls where
+module QR.BathroomStalls where
 
 
 import Data.Char
