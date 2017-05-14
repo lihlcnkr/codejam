@@ -1,4 +1,4 @@
-module TidyNumbers where
+module QR.TidyNumbers where
 
 import Data.List
 import Data.Char

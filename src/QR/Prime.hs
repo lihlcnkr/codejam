@@ -1,4 +1,4 @@
-module Prime where
+module QR.Prime where
 
 import Data.List
 

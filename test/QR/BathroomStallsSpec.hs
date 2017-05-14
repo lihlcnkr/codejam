@@ -5,7 +5,7 @@ module QR.BathroomStallsSpec where
 import Test.Hspec
 import Data.Maybe
 import Data.Set
-import BathroomStalls
+import QR.BathroomStalls
 
 
 spec :: Spec

@@ -1,11 +1,11 @@
-module AmpleSyrup where
+module R1.AmpleSyrup where
 
 import Data.List
 
 import Data.Set (Set)
 import qualified Data.Set as Set
 
-import Prime
+import QR.Prime
 import Data.Maybe
 
 import Text.Printf

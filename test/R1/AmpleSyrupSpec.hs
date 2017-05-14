@@ -5,7 +5,7 @@ module R1.AmpleSyrupSpec where
 import Test.Hspec
 import Data.Maybe
 import Data.Set
-import AmpleSyrup
+import R1.AmpleSyrup
 
 
 spec :: Spec

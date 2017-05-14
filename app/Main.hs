@@ -12,9 +12,6 @@ readFileToCases x = do
       caseCount = read x::Int
   return (caseCount,xs)
 
-
-
-
 readCaseAndToOutputV2 :: (CodeJam a) => (a -> String) -> (Int, a) -> IO String
 readCaseAndToOutputV2 f (x, y) = do
   --putStrLn ("Case #" ++ (show x) ++ ": " ++ y)
@@ -23,8 +20,6 @@ readCaseAndToOutputV2 f (x, y) = do
   let ret = f y
   putStrLn ("ret:" ++ ret)
   return ("Case #" ++ (show x) ++ ": " ++ ret)
-
-
 
 --  "resources/codejam.in" "resources/codejam.out"
 main = do

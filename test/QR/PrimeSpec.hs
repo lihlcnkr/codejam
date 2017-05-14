@@ -5,7 +5,7 @@ module QR.PrimeSpec where
 import Test.Hspec
 import Data.Maybe
 import Data.Set
-import Prime
+import QR.Prime
 
 
 spec :: Spec
