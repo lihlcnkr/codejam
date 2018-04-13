@@ -1,9 +1,9 @@
 module Main where
 
 import CodeJam
-import R1.ParentPartner
 import System.Environment
 import Data.List
+import QR.Beam
 
 readFileToCases:: String -> IO (Int, [String])
 readFileToCases x = do
@@ -25,11 +25,13 @@ readCaseAndToOutputV2 f (x, y) = do
 main = do
   (arg1:argRest) <- getArgs
   --caseDatas <- readFileToCases arg1
+
+  print "hello"
   --outputs <- mapM (readCaseAndToOutput getBathroomStalls) caseDatas
   --mapM_ putStrLn $ fmap snd caseDatas
-  (datCount, datas) <- readFileToCases arg1
-  let caseDatas = zip [1..] $ ((splitDatas datas getTotalLineCount)::[ParentPartner])
-  outputs <- mapM (readCaseAndToOutputV2 codeJamCalc) caseDatas
+  -- (datCount, datas) <- readFileToCases arg1
+  -- let caseDatas = zip [1..] $ ((splitDatas datas getMinChange))
+  -- outputs <- mapM (readCaseAndToOutputV2 codeJamCalc) caseDatas
   
-  --mapM_ putStrLn $ fmap outputs
-  writeFile (head argRest) $ unlines outputs
+  -- --mapM_ putStrLn $ fmap outputs
+  -- writeFile (head argRest) $ unlines outputs

@@ -5,11 +5,11 @@ module QR.BathroomStallsSpec where
 import Test.Hspec
 import Data.Maybe
 import Data.Set
-import QR.TripletSort
+import QR.BathroomStalls
 
 
 spec :: Spec
 spec = do
   describe "test getSleepNumber" $ do
     it "test getBathroomStalls" $
-      fmap getResult [["5","5 6 8 4 3"],["3", "8 9 7"]] `shouldBe` [["OK"],["1"]]
+      fmap getBathroomStalls ["4 2", "5 2", "6 2","1000 1000", "1000 1"] `shouldBe` ["1 0","1 0","1 1","0 0", "500 499"]

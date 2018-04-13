@@ -15,19 +15,9 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:       src
-  exposed-modules:     QR.Prime
---                     , Sleep
-                     --, Pancakes
-                     --, TidyNumbers
-                     --, BathroomStalls
-                     --, FasionShow
-                     --, AmpleSyrup
+  exposed-modules:     QR.TripletSort
+                     , QR.Beam
                      , CodeJam
-                     , R1.ParentPartner
-                     , CodeWars.TwiceLiner
-                     , CodeWars.TinyTreePassCompiler
-                     , CodeWars.BraceExpansion
-                     , CodeWars.MoleculeToAtoms
   build-depends:       base >= 4.7
                      , containers
                      , mtl
